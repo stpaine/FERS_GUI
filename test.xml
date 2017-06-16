@@ -1,0 +1,65 @@
+<simulation name="test2">
+  <pulse filename="" name="Tx_pulse" type="file">
+    <power>10kw</power>
+    <carrier>89e6</carrier>
+  </pulse>
+  <antenna filename="" name="antenna_1" pattern="isotropic">
+    <efficiency>1</efficiency>
+    <alpha/>
+    <beta/>
+    <gamma/>
+    <diameter/>
+    <azscale/>
+    <elscale/>
+  </antenna>
+  <platform name="Platform_1">
+    <motionpath interpolation="Linear">
+      <positionwaypoint>
+        <x>1</x>
+        <y>2</y>
+        <altitude>10</altitude>
+        <time>0</time>
+      </positionwaypoint>
+      <positionwaypoint>
+        <x>1</x>
+        <y>2</y>
+        <altitude>1000</altitude>
+        <time>180</time>
+      </positionwaypoint>
+    </motionpath>
+    <motionpath interpolation="Linear">
+      <positionwaypoint>
+        <x>1</x>
+        <y>2</y>
+        <altitude>1000</altitude>
+        <time>180</time>
+      </positionwaypoint>
+    </motionpath>
+  </platform>
+  <parameters>
+    <starttime/>
+    <endtime/>
+    <c>299792458</c>
+    <rate/>
+    <export binary="false" csv="false" csvbinary="false"/>
+    <interpreate/>
+    <randomseed/>
+    <adc_bits/>
+    <oversample/>
+  </parameters>
+  <platform name="jeff">
+    <fixedrotation>
+      <startazimuth>2</startazimuth>
+      <azimuthrate>33</azimuthrate>
+      <startelevation>3</startelevation>
+      <elevationrate>3</elevationrate>
+    </fixedrotation>
+    <transmitter antenna="yr" name="" pulse="47y" timing="r" type="pulsed">
+      <prf>r</prf>
+    </transmitter>
+    <target name="f">
+      <rcs type="isotropic">f</rcs>
+      <model type="constant">f<k>f</k></model>
+    </target>
+  </platform>
+</simulation>
